@@ -1,22 +1,118 @@
-# Satellite-Telemetry-
-THIS IS A SATELLITE TELEMETRY DATASET ANALYSIS AND PREDICTION PROJECT.
-IT USES DATA FROM A SATELLITE TO PREDICT WHETHER THERE IS SOME ANOMALY OR ERROR IN THE SIGNAL COMMUNICATION.
-THE SATELLITE RAW DATA IS MESSY AND HAS BEEN CLEANED THOROUGHLY BEFORE STANDARDIZATION.
-LIBRARIES USED:
-NUMPY
-PANDAS
-SCI-KIT LEARN
-MATPLOTLIB
-AFTER CLEANING THE RAW DATA, STANDARD SCALER WAS USED TOO SCALE IT AS THERE MAY BE HIGH FLUTUATUIONS IN THE DATA. BY SCALING. THE MEAN BECOMES 0 AND THE STANDARD DEVIATION=1.
-EACH DATA POINT IS TRANSFORMED BY THE Z-SCORE METHOD:-
-                                                Y=(X-MEAN)/ S.D.
-AFTER SCALING LOGISTIC REGRESSION MODEL HAS BEEN IMPLEMENTED-
-FROM SCRATCH USING NUMPY + L2 REGULARIZATION BY WHICH HIGHER WEIGHTS ARE PENALIZED
-BY LIBRARY USING SCI-KIT LEARN
-THEN THE ACCURACIES OF ALL THE 3 MODELS ARE COMPARED USING THE METRICS--- ACCURACY AND CONFUSION MATRIX.
-CONFUSION MATRIX=
-[TRUE 0S     FALSE 0S
-FALSE 1S     TRUE 1S ]
-THE LOGISTIC REGRESSION USES THE MINIMIZTION OF BINARY ROSS ENTROPY LOSS OR MAXIMIZATION OF LOG LIKELIHOOD OF A FUNCTION.
-THERE WERE 2 DATASETS USED IN THIS FILE-
- ONE FOR TRAINING AND OTHER FOR TESTING.
+# 🛰️ Satellite Telemetry Anomaly Detection
+
+> Detecting anomalies in satellite communication signals using Machine Learning.
+
+---
+
+## 📌 Overview
+This project analyzes **satellite telemetry data** to predict whether there is an **anomaly or error in signal communication**.
+
+The raw satellite data is noisy and unstructured, so the pipeline focuses on:
+- 🧹 Data cleaning  
+- 📏 Feature scaling  
+- 🤖 Model implementation (from scratch + library)  
+- 📊 Performance comparison  
+
+---
+
+## 🎯 Objectives
+- Clean and preprocess raw telemetry data  
+- Standardize features for stable learning  
+- Build Logistic Regression models  
+- Detect anomalies in communication signals  
+- Compare model performances  
+
+---
+
+## 🛠️ Tech Stack
+- 🐍 Python  
+- 📦 NumPy  
+- 🐼 Pandas  
+- 📊 Matplotlib  
+- 🤖 Scikit-learn  
+
+---
+
+## 📂 Dataset
+- Satellite telemetry dataset  
+- Split into:
+  - Training set  
+  - Testing set  
+
+---
+
+## 🔍 Project Workflow
+
+### 🧹 Data Cleaning
+- Removed inconsistencies from raw telemetry data  
+- Handled noise and irregular values  
+- Prepared structured dataset for modeling  
+
+---
+
+### 📏 Feature Scaling (Standardization)
+Due to high fluctuations in telemetry signals, **StandardScaler** was applied.
+
+Each feature is transformed using the Z-score: Y = (X - μ) / σ
+
+✔ Mean = 0  
+✔ Standard Deviation = 1  
+
+---
+
+## 🤖 Model Implementation
+
+### 1️⃣ Logistic Regression (From Scratch)
+- Implemented using **NumPy**  
+- Includes:
+  - Sigmoid function  
+  - Gradient descent optimization  
+  - L2 Regularization (penalizes large weights)  
+
+---
+
+### 2️⃣ Logistic Regression (Scikit-learn)
+- Implemented using **Scikit-learn**  
+- Built-in optimization and regularization  
+
+---
+
+## 📉 Loss Function
+- **Binary Cross-Entropy Loss**
+- Equivalent to maximizing **log-likelihood**
+
+---
+
+## 📊 Model Evaluation
+
+Models are compared using:
+
+- ✔ Accuracy  
+- ✔ Confusion Matrix  
+
+### 📌 Confusion Matrix Format
+[ True Negatives False Positives
+False Negatives True Positives]
+
+
+
+---
+
+## 💡 Key Highlights
+✔ End-to-end ML pipeline  
+✔ Handles noisy real-world telemetry data  
+✔ Custom implementation of Logistic Regression  
+✔ Regularization to prevent overfitting  
+✔ Model comparison (from-scratch vs library)  
+
+---
+
+## 🚀 Future Improvements
+- 🔧 Hyperparameter tuning  
+- ⚡ Try advanced models (Random Forest, XGBoost)  
+- 📡 Real-time anomaly detection system  
+- 🌐 Deployment as monitoring dashboard  
+
+---
+
+
